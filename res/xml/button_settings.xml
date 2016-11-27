@@ -15,7 +15,6 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:key="button_settings"
         android:title="@string/button_pref_title">
 
@@ -47,12 +46,6 @@
                 android:summary="@string/navigation_bar_arrow_keys_summary"
                 android:defaultValue="false" />
 
-        <PreferenceScreen
-            android:key="navigation_bar"
-            android:title="@string/navigation_bar_title">
-            <intent android:action="com.android.settings.action.NAV_BAR_TUNER" />
-        </PreferenceScreen>
-
         <ListPreference
             android:key="navigation_home_long_press"
             android:dialogTitle="@string/navigation_bar_home_long_press_title"
@@ -80,11 +73,6 @@
     <PreferenceCategory
         android:key="power_key"
         android:title="@string/hardware_keys_power_key_title" >
-
-        <PreferenceScreen
-            android:key="power_menu"
-            android:title="@string/power_menu_title"
-            android:fragment="com.android.settings.rr.input.PowerMenuActions" />
 
         <SwitchPreference
             android:key="power_end_call"
