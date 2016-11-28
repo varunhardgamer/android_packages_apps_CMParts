@@ -73,11 +73,6 @@
           android:fragment="org.cyanogenmod.cmparts.statusbar.StatusBarSettings"
           cm:xmlRes="@xml/status_bar_settings" />
 
-    <part android:key="power_menu"
-          android:title="@string/power_menu_title"
-          android:fragment="org.cyanogenmod.cmparts.input.PowerMenuActions"
-          cm:xmlRes="@xml/power_menu_settings" />
-
     <part android:key="privacy_guard_manager"
           android:title="@*cyanogenmod.platform:string/privacy_guard_manager_title"
           android:fragment="org.cyanogenmod.cmparts.privacyguard.PrivacyGuardManager"
