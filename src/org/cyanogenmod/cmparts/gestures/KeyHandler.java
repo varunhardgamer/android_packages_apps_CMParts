@@ -145,7 +145,7 @@ public class KeyHandler implements DeviceKeyHandler {
 
     public boolean handleKeyEvent(final KeyEvent event) {
         final int action = mActionMapping.get(event.getScanCode(), -1);
-        if (action < 0 || event.getAction() != KeyEvent.ACTION_UP || !hasSetupCompleted()) {
+        if (action < 0 || event.getAction() != KeyEvent.ACTION_UP) {
             return false;
         }
 
@@ -164,11 +164,6 @@ public class KeyHandler implements DeviceKeyHandler {
         }
 
         return true;
-    }
-
-    private boolean hasSetupCompleted() {
-        return CMSettings.Secure.getInt(mContext.getContentResolver(),
-                CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED, 0) != 0;
     }
 
     private void processEvent(final int action) {
